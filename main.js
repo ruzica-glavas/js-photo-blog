@@ -5,7 +5,6 @@ const container= document.querySelector(`.container`)
 
 
 
-   
 
     fetch(`https://lanciweb.github.io/demo/api/pictures/`)
         .then(response => response.json())
@@ -14,6 +13,8 @@ const container= document.querySelector(`.container`)
             // codice per far qualcosa con la risposta
             console.log(data);
 
+
+            // dove salvare le card
             container.innerHTML="";
 
             //aggiungere il ciclo for each per far passare tutte le carte
@@ -33,20 +34,19 @@ const container= document.querySelector(`.container`)
                 </div>
             </div>
         </div>`
-            });
-    
-    
-            
-            
+
+                
+            });                
         })
         .catch(error => {
             // codice da eseguire in caso di errore
             console.error(error);
         });
     
-       
-    
 
+    
+       
+        
        
 
         

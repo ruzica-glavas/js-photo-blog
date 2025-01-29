@@ -25,7 +25,7 @@ header{
 
 main{
     background-image: url(./assets_day1/img/cork.png);
-    padding: 50px 150px ;
+    padding: 50px;
     
 }
 
@@ -46,16 +46,25 @@ main{
     
 }
 
+
+
 .card.static{
     display: none;
     margin-bottom: 20px;
+    
 }
 
 .card{
     margin-bottom: 20px;
     padding: 10px;
     position: absolute;
-   
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /*In questo modo le card non si alzano di scatto*/
+     
+}
+
+.card:hover{
+    transform: scale(1.05);  /*In questo modo l'immagine si ingrandisce*/
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3); 
 }
 
 .pin{
