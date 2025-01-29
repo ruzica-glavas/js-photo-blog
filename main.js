@@ -29,6 +29,7 @@ const container= document.querySelector(`.container`)
                 <div class="card-body">
                 <h5 class="card-title">${element.title}</h5>
                 <p class="card-text">${element.date}</p>
+                <img src="./assets_day1/img/pin.svg" class="pin" alt="pin dell'immagine">
                 </div>
             </div>
         </div>`

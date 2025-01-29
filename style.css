@@ -53,7 +53,16 @@ main{
 
 .card{
     margin-bottom: 20px;
+    padding: 10px;
+    position: absolute;
    
+}
+
+.pin{
+    position: relative;
+    z-index: 1;
+    bottom: 375px;
+    left: 97px;
 }
 
 
