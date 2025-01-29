@@ -1,6 +1,9 @@
 /*Font per il resto del testo:
 ‘Sometype Mono’, ‘monospace’*/
 
+
+/*Parte dell'header*/
+
 header{
     display: flex;
     justify-content: center;
@@ -16,3 +19,30 @@ header{
     font-style:oblique;
 }
 
+
+/*Parte del main*/
+
+main{
+    background-image: url(./assets_day1/img/cork.png);
+    padding: 30px;
+    
+}
+
+.card-title{
+    font-family: "Embed code", sans-serif;
+    font-weight: bold;
+}
+
+.card-text{
+    font-family: "Sometype Mono", monospace;
+    font-style:oblique;
+}
+
+.container{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.card{
+    flex-basis: calc(90%/3);
+}
