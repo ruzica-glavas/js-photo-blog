@@ -1,0 +1,18 @@
+/*Font per il resto del testo:
+‘Sometype Mono’, ‘monospace’*/
+
+header{
+    display: flex;
+    justify-content: center;
+    padding: 25px;
+    background-image:url(./assets_day1/img/wall.png)
+}
+
+
+#title{
+    font-family: "Embed code", sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-style:oblique;
+}
+
