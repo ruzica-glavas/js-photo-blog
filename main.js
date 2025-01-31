@@ -1,6 +1,6 @@
 //URL per API: https://lanciweb.github.io/demo/api/pictures///
 
-const card= document.querySelector(`.card`)
+const card= document.querySelectorAll(`.card`)
 const container= document.querySelector(`.container`)
 
 
@@ -46,7 +46,35 @@ const container= document.querySelector(`.container`)
 
     
        
-        
+//Parte dell'overlay
+const overlay = document.getElementById("overlay");
+const overlayImg = document.getElementById("overlay-img");
+const closeBtn = document.getElementById("close-btn");
+
+//Aggiunta del click nella card
+
+document.addEventListener("click", (event) => {
+    if (event.target.classList.contains("card-img-top")) {
+        overlayImg.src = event.target.src; // Imposta l'immagine dell'overlay
+        overlay.style.visibility = "visible";
+        overlay.style.opacity = "1";
+        overlay.style.zIndex = "99999"; // Forza lo z-index per sicurezza
+    }
+});
+
+// Pulsante per chiudere l'overlay
+closeBtn.addEventListener("click", () => {
+    overlay.style.visibility = "hidden";
+    overlay.style.opacity = "0";
+});
+
+// Chiudere l'overlay cliccando fuori dall'immagine
+overlay.addEventListener("click", (event) => {
+    if (event.target === overlay) {
+        overlay.style.visibility = "hidden";
+        overlay.style.opacity = "0";
+    }
+});
        
 
         
