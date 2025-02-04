@@ -3,6 +3,10 @@
 const card= document.querySelectorAll(`.card`)
 const container= document.querySelector(`.container`)
 
+//Parte dell'overlay
+const overlay = document.getElementById("overlay");
+const overlayImg = document.getElementById("overlay-img");
+const closeBtn = document.getElementById("close-btn");
 
 
 
@@ -18,7 +22,6 @@ const container= document.querySelector(`.container`)
             container.innerHTML="";
 
             //aggiungere il ciclo for each per far passare tutte le carte
-
             
             data.forEach(element => {
                 console.log(element)
@@ -36,45 +39,30 @@ const container= document.querySelector(`.container`)
         </div>`
 
                 
-            });                
+            });   
+
+            //Aggiunta del click nell'overlay
+            const imagesOverlay= document.querySelectorAll(".card-img-top")
+            imagesOverlay.forEach(element=>{  //ciclare tuttle le immagini
+                element.addEventListener(`click`,()=>{
+                    overlayImg.src=element.src;
+                    overlay.style.display = "flex"; //far in modo che l'overlay sia visibile
+                })
+            })
+                         
         })
         .catch(error => {
             // codice da eseguire in caso di errore
             console.error(error);
         });
     
-
-    
-       
-//Parte dell'overlay
-const overlay = document.getElementById("overlay");
-const overlayImg = document.getElementById("overlay-img");
-const closeBtn = document.getElementById("close-btn");
-
-//Aggiunta del click nella card
-
-document.addEventListener("click", (event) => {
-    if (event.target.classList.contains("card-img-top")) {
-        overlayImg.src = event.target.src; // Imposta l'immagine dell'overlay
-        overlay.style.visibility = "visible";
-        overlay.style.opacity = "1";
-        overlay.style.zIndex = "99999"; // Forza lo z-index per sicurezza
-    }
-});
-
 // Pulsante per chiudere l'overlay
 closeBtn.addEventListener("click", () => {
-    overlay.style.visibility = "hidden";
-    overlay.style.opacity = "0";
+    overlay.style.display= "none";
 });
 
-// Chiudere l'overlay cliccando fuori dall'immagine
-overlay.addEventListener("click", (event) => {
-    if (event.target === overlay) {
-        overlay.style.visibility = "hidden";
-        overlay.style.opacity = "0";
-    }
-});
+
+
        
 
         
