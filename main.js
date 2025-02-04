@@ -44,7 +44,7 @@ const closeBtn = document.getElementById("close-btn");
             //Aggiunta del click nell'overlay
             const imagesOverlay= document.querySelectorAll(".card-img-top")
             imagesOverlay.forEach(element=>{  //ciclare tuttle le immagini
-                element.addEventListener(`click`,()=>{
+                element.addEventListener(`click`, () => {
                     overlayImg.src=element.src;
                     overlay.style.display = "flex"; //far in modo che l'overlay sia visibile
                 })
